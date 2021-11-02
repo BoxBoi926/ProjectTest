@@ -81,6 +81,10 @@ def logOut():
 def blogPage():
     return render_template('indivBlog.html')
 
+@app.route("/goback", methods=['GET', 'POST'])
+def back():
+    return render_template('userblog.html', heading = teamBord, username = session['user'])
+
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
     app.debug = True
