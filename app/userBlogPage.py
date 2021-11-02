@@ -14,6 +14,7 @@ import loginpage
 app = Flask(__name__)    #create Flask object
 app.secret_key=os.urandom(32) #secret key for flask to work
 
+# not working
 @app.route("/blog1", methods=['GET', 'POST'])
 def blogPage():
     return render_template('indivBlog.html')
