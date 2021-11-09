@@ -25,19 +25,22 @@ P00: User's Personal Blog Page
      <br>
 
      <form action="createPost" method="post">
-       {% if session%}
         <button type="submit" name="sub2">Create Post</button>
-      {% endif %}
      </form>
+
+     <br>
+
+     {% for blogTitle in listBlog %}
+        <form action="" method="post">
+          <button type="submit" name="sub1">{{blogTitle}}</button>
+        </form>
+        <br>
+     {% endfor %}
 
      <br>
 
      <form action="logout" method="post">
         <button type="submit" name="sub1">Logout</button>
-     </form>
-
-     <form action="blog1" method="post">
-        <button type="submit" name="sub1">Minecraft</button>
      </form>
 
    </body>
